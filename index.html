@@ -1,143 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-<meta charset="utf-8">
-<meta name="descinion" content="Prepared by Mø Ahmed ">
-<meta thhp-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="r.css">
-<title>My accounts online-Mø Ahmed</title>
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta thhp-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="asas.css">
+        <title>Subscribe with Cap Nader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .input-container {
+            margin: 10px 0;
+        }
+        input[type="text"], input[type="tel"] {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function sendToTelegram() {
+            const input1 = document.getElementById('input1').value;
+            const input2 = document.getElementById('input2').value;
+            const input3 = document.getElementById('input3').value;
+            const input4 = document.getElementById('input4').value;
+            const input5 = document.getElementById('input5').value;
+
+            const message = 
+            
+            `1. Name: ${input1}
+             2. Number: ${input2} 
+             3. Weight (kg): ${input3} 
+             4. Height (cm): ${input4}
+             5. message: ${input5}
+            `;
+
+            const telegramToken = "8025713173:AAGekW5_e-iQcv4UbISih5GbUtdAKdzchlI"; // استبدلها بالرمز الخاص بك
+            const chatId = "5471126331"; // استبدلها برقم المحادثة الخاص بك
+           
+
+            const url = `https://api.telegram.org/bot${telegramToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+            fetch(url)
+                .then(response => {
+                    if (response.ok) {
+                        alert("تم إرسال المعلومات بنجاح سوف يتم التواصل معك  عبر الواتس اب!");
+                    } else {
+                        alert("حدث خطأ أثناء إرسال المعلومات.");
+                    }
+                })
+                .catch(error => {
+                    alert("حدث خطأ أثناء إرسال المعلومات.");
+                    console.error("Error:", error);
+                });
+        }
+
+
+    </script>
 </head>
 <body>
-<div class="contenr">
-    <header>
-<a href="#Mø Ahmed" class="logo">Mø Ahmed</a>
-<nav class="tr">
-<a class="ty" href="lar.html">Arabic</a>
-</nav>
-</div>
-</header>
-<br>
-<div class="q">
 
-<h2>
-   <span class="qq">Welcome to</span> 
-<br>
-<br>
-    <span class="qqq">Mø Ahmed Website
-    </span>
-<br>
-<br>
-<div class="qw">
 
-<span class="qqqq">My social</span><div class="qqqqq"> media accounts</div>
-</div>
-<br>
-<div class="acc">   
-<a target="_blank" href="https://web.facebook.com/profile.php?id=61550279660292" class="icon" ><i class='bx bxl-facebook-circle'></i></a>
-<a target="_blank" href="https://www.instagram.com/mo_ahmed1.k/?__pwa=1" class="icon" ><i class='bx bxl-instagram'></i></a>
-<a target="_blank" href="https://t.me/mo_1ok"  class="icon"><i class='bx bxl-telegram'></i></a>
-<a target="_blank" href="https://web.facebook.com/profile.php?id=61550279660292"  class="icon"><i class='bx bxl-messenger'></i></a>
-</div>
-</h2>
 
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<footer class="footer">
-<p class="ftooer-t">Copyrights @<span ><a class="ff"  href="https://t.me/mo_1ok">Mø Ahmed</a></span></p>
 
-   <div class="f-t">   
-    <a target="_blank" href="https://web.facebook.com/profile.php?id=61550279660292" class="icon" ><i class='bx bxl-facebook-circle'></i></a>
-    <a target="_blank" href="https://www.instagram.com/mo_ahmed1.k/?__pwa=1" class="icon" ><i class='bx bxl-instagram'></i></a>
-    <a target="_blank" href="https://t.me/mo_1ok"  class="icon"><i class='bx bxl-telegram'></i></a>
-    <a target="_blank" href="https://web.facebook.com/profile.php?id=61550279660292"  class="icon"><i class='bx bxl-messenger'></i></a>
+    <h1 class="logo1">Your data</h1>
+    <div class="input-container">
+        <label for="input1"></label>
+        <input type="text" id="input1" placeholder="name">
     </div>
-</div>
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="input-container">
+        <label for="input2"></label>
+        <input type="tel" id="input2" placeholder="phone number">
+    </div>
+    <div class="input-container">
+        <label for="input3"></label>
+        <input type="tel" id="input3" placeholder="...kg">
+    </div>
+    <div class="input-container">
+        <label for="input4"></label>
+        <input type="tel" id="input4" placeholder="...cm">
+    </div>
+    <div class="input-container">
+        <label for="input5"></label>
+        <input type="text" id="input5" placeholder=" A message to the captain">
+    </div>
+    <button onclick="sendToTelegram()">send</button>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
